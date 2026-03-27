@@ -1,6 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 import authRouter from '../src/routes/authRouter.js';
+import incomeRouter from './routes/incomeRoute.js';
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.get("/", (req, res) => {
 })
 
 app.use("/api/auth", authRouter)
+app.use("/api/income", incomeRouter);
 
 
 
